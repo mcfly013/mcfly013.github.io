@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arnolds Trainingsplan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://i.imgur.com/LMHxWFa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: white;
+      backdrop-filter: brightness(0.3);
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background: #222;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+    .tab.active {
+      background: #444;
+    }
+    .day {
+      display: none;
+    }
+    .day.active {
+      display: block;
+    }
+    .exercise {
+      margin-bottom: 15px;
+      background: #111;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .exercise img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    input[type="number"] {
+      width: 60px;
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+    .progress {
+      margin-top: 20px;
+      background: #555;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 20px;
+    }
+    .progress-bar {
+      height: 100%;
+      background: limegreen;
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Arnolds Trainingsplan</h1>
+    <div class="tabs">
+      <div class="tab active" onclick="showDay(0)">Montag</div>
+      <div class="tab" onclick="showDay(1)">Mittwoch</div>
+      <div class="tab" onclick="showDay(2)">Freitag</div>
+    </div>
