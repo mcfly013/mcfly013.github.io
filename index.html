@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnold Trainingsplan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Arnold Trainingsplan</h1>
+        <div id="progress-container">
+            <span id="progress-text">Fortschritt: 0%</span>
+            <div id="progress-bar"><div id="progress-fill"></div></div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="accordion">
+            <button class="accordion-btn">Montag</button>
+            <div class="panel" id="day-monday">
+                <!-- Übungen für Montag werden hier dynamisch eingefügt -->
+            </div>
+            
+            <button class="accordion-btn">Mittwoch</button>
+            <div class="panel" id="day-wednesday">
+                <!-- Übungen für Mittwoch werden hier dynamisch eingefügt -->
+            </div>
+            
+            <button class="accordion-btn">Freitag</button>
+            <div class="panel" id="day-friday">
+                <!-- Übungen für Freitag werden hier dynamisch eingefügt -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
