@@ -1,242 +1,141 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arnolds Trainingsplan</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: url('https://i.imgur.com/LMHxWFa.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-      color: white;
-      backdrop-filter: brightness(0.3);
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .tab {
-      padding: 10px 20px;
-      cursor: pointer;
-      background: #222;
-      margin: 0 5px;
-      border-radius: 5px;
-    }
-    .tab.active {
-      background: #444;
-    }
-    .day {
-      display: none;
-    }
-    .day.active {
-      display: block;
-    }
-    .exercise {
-      margin-bottom: 15px;
-      background: #111;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .exercise img {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    input[type="number"] {
-      width: 60px;
-      margin-left: 5px;
-      margin-right: 10px;
-    }
-    .progress {
-      margin-top: 20px;
-      background: #555;
-      border-radius: 5px;
-      overflow: hidden;
-      height: 20px;
-    }
-    .progress-bar {
-      height: 100%;
-      background: limegreen;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Arnolds Trainingsplan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
     <h1>Arnolds Trainingsplan</h1>
-    <div class="tabs">
-      <div class="tab active" onclick="showDay(0)">Montag</div>
-      <div class="tab" onclick="showDay(1)">Mittwoch</div>
-      <div class="tab" onclick="showDay(2)">Freitag</div>
-    </div>
+<h2>Montag – Brust & Rücken</h2>
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arnolds Trainingsplan</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: url('https://i.imgur.com/LMHxWFa.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-      color: white;
-      backdrop-filter: brightness(0.3);
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .tab {
-      padding: 10px 20px;
-      cursor: pointer;
-      background: #222;
-      margin: 0 5px;
-      border-radius: 5px;
-    }
-    .tab.active {
-      background: #444;
-    }
-    .day {
-      display: none;
-    }
-    .day.active {
-      display: block;
-    }
-    .exercise {
-      margin-bottom: 15px;
-      background: #111;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .exercise img {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    input[type="number"] {
-      width: 60px;
-      margin-left: 5px;
-      margin-right: 10px;
-    }
-    .progress {
-      margin-top: 20px;
-      background: #555;
-      border-radius: 5px;
-      overflow: hidden;
-      height: 20px;
-    }
-    .progress-bar {
-      height: 100%;
-      background: limegreen;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Arnolds Trainingsplan</h1>
-    <div class="tabs">
-      <div class="tab active" onclick="showDay(0)">Montag</div>
-      <div class="tab" onclick="showDay(1)">Mittwoch</div>
-      <div class="tab" onclick="showDay(2)">Freitag</div>
-    </div>
-    <div class="day">
-      <h2>Mittwoch – Beine & Core</h2>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/squat.png" alt="Kniebeugen">
-        Kniebeugen  
-        Sätze: <input type="number"> Wdh: <input type="number"> Gewicht: <input type="number"> 
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/deadlift.png" alt="Beinpresse">
-        Beinpresse  
-        Sätze: <input type="number"> Wdh: <input type="number"> Gewicht: <input type="number"> 
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/plank.png" alt="Plank">
-        Plank  
-        Sekunden: <input type="number"> 
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-    </div>
-    <div class="day">
-      <h2>Freitag – Rücken & Bizeps</h2>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/pullups.png" alt="Klimmzüge">
-        Klimmzüge  
-        Sätze: <input type="number"> Wdh: <input type="number"> 
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/barbell.png" alt="Langhantelrudern">
-        Langhantelrudern  
-        Sätze: <input type="number"> Wdh: <input type="number"> Gewicht: <input type="number"> 
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-      <div class="exercise">
-        <img src="https://img.icons8.com/ios/50/arm-curl.png" alt="Bizepscurls">
-        Bizepscurls KH  
-        Sätze: <input type="number"> Wdh: <input type="number"> Gewicht: <input type="number">
-        <input type="checkbox" onchange="updateProgress()">
-      </div>
-    </div>
-    <div class="progress">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
-  </div> <!-- Ende container -->
+        <div class="uebung">
+            <h3>Bankdrücken</h3>
+            <img src="images/bankdruecken.jpg" alt="Bankdrücken">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Schrägbankdrücken</h3>
+            <img src="images/schraegbank.jpg" alt="Schrägbankdrücken">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Klimmzüge</h3>
+            <img src="images/klimmzuege.jpg" alt="Klimmzüge">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Langhantelrudern</h3>
+            <img src="images/langhantelrudern.jpg" alt="Langhantelrudern">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        <h2>Mittwoch – Beine</h2>
 
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const days = document.querySelectorAll('.day');
+        <div class="uebung">
+            <h3>Kniebeugen</h3>
+            <img src="images/kniebeugen.jpg" alt="Kniebeugen">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Beinpresse</h3>
+            <img src="images/beinpresse.jpg" alt="Beinpresse">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Beinstrecker</h3>
+            <img src="images/beinstrecker.jpg" alt="Beinstrecker">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Beinbeuger</h3>
+            <img src="images/beinbeuger.jpg" alt="Beinbeuger">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Wadenheben</h3>
+            <img src="images/wadenheben.jpg" alt="Wadenheben">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        <h2>Freitag – Schultern & Arme</h2>
 
-    function showDay(index) {
-      tabs.forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-        days[i].classList.toggle('active', i === index);
-      });
-      updateProgress();
-    }
-
-    function updateProgress() {
-      const checkboxes = document.querySelectorAll('.day.active input[type="checkbox"]');
-      const checked = [...checkboxes].filter(c => c.checked).length;
-      const total = checkboxes.length;
-      const percent = total === 0 ? 0 : Math.round((checked / total) * 100);
-      document.getElementById('progressBar').style.width = percent + '%';
-    }
-  </script>
+        <div class="uebung">
+            <h3>Schulterdrücken</h3>
+            <img src="images/schulterdruecken.jpg" alt="Schulterdrücken">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Seitheben</h3>
+            <img src="images/seitheben.jpg" alt="Seitheben">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Bizepscurls</h3>
+            <img src="images/bizepscurls.jpg" alt="Bizepscurls">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Trizepsdrücken</h3>
+            <img src="images/trizepsdruecken.jpg" alt="Trizepsdrücken">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
+        <div class="uebung">
+            <h3>Konzentrationscurls</h3>
+            <img src="images/konzentrationscurls.jpg" alt="Konzentrationscurls">
+            <div class="inputfelder">
+                Sätze: <input type="number" min="1" max="10">
+                Wiederholungen: <input type="number" min="1" max="30">
+            </div>
+        </div>
+        
 </body>
 </html>
